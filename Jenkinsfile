@@ -12,13 +12,13 @@ pipeline {
                             
                             # 1. Image bauen (Das hat gefehlt!)
                             # Der Punkt am Ende steht für das aktuelle Verzeichnis (wo das Dockerfile liegt)
-                            docker build -t muellcri/node-web-app:latest .
+                            docker build -t sapdmsql/node-web-app:latest .
                             
                             # 2. Einloggen
                             echo $PASSWORD | docker login -u $USERNAME --password-stdin
                             
                             # 3. Jetzt existiert das Image lokal und kann gepusht werden
-                            docker push muellcri/node-web-app:latest
+                            docker push sapdmsql/node-web-app:latest
                         '''
                     }
                 }
